@@ -4,8 +4,8 @@ var h;
 var g;
 var t;
 const lista = [];
-const nom = JSON.parse(localStorage.getItem("name"));
-const apell = JSON.parse(localStorage.getItem("surname"));
+const nom = JSON.parse(sessionStorage.getItem("name"));
+const apell = JSON.parse(sessionStorage.getItem("surname"));
 
 
 
@@ -36,8 +36,8 @@ function ramen(){
     const g = new nombre (d = prompt("Nombre"), e = prompt("Apellido"));
     const enJSON1 = JSON.stringify(d);
     const enJSON2 = JSON.stringify(e);
-    localStorage.setItem("name", enJSON1);
-    localStorage.setItem("surname", enJSON2);
+    sessionStorage.setItem("name", enJSON1);
+    sessionStorage.setItem("surname", enJSON2);
     alert("Registro completo, ingrese sesión")
     document.getElementById("nusuario").value = nom;
     document.getElementById("rusuario").value = apell;
