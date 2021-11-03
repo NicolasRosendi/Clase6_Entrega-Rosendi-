@@ -14,15 +14,14 @@ h1{
 body{
     background-color:whitesmoke;
 }
-h2{
-    margin-top: 150px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    text-align: center;
+input{
+    width: fit-content;
+    height: fit-content;
+    margin: 5px auto;
+    text-align: left;
 }
 div{
-    width: 1090px;
+    width: auto;
     border: 1px solid;
     margin: 15px auto;
     padding: 100px;
