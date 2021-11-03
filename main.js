@@ -4,6 +4,25 @@ var h;
 var g;
 var t;
 const lista = [];
+const nom = JSON.parse(localStorage.getItem("name"));
+const apell = JSON.parse(localStorage.getItem("surname"));
+
+
+
+
+let logearse = document.getElementById("logeo");
+let box =document.getElementById("cuerpo");
+var boton = document.getElementById("boton");
+
+logearse.addEventListener("click", nis);
+
+
+function nis(){
+    let login = document.getElementById("cuerpo");
+    
+    asistente();
+    
+}
 
 function nombre(n, o){
     this.n = n;
@@ -15,9 +34,20 @@ ramen();
 function ramen(){
     alert("Comienza secuencia de registro")
     const g = new nombre (d = prompt("Nombre"), e = prompt("Apellido"));
-    alert("Ingresando al asistente virtual")
-    asistente();
+    const enJSON1 = JSON.stringify(d);
+    const enJSON2 = JSON.stringify(e);
+    localStorage.setItem("name", enJSON1);
+    localStorage.setItem("surname", enJSON2);
+    alert("Registro completo, ingrese sesión")
+    document.getElementById("nusuario").value = nom;
+    document.getElementById("rusuario").value = apell;
 }
+//     alert("No se preocupe por los espacios vacios, su nombre quedará encuadrado en la página en cuanto salga para comprobar que los datos cargaran correctamente");
+    
+// }
+
+// asistente();
+
 
 function cambio(Dou){
     Dou = prompt("Cambiar el nombre presionando '1' o revisarlo presionando '2', o '3' para volver al asistente")
@@ -28,7 +58,7 @@ function cambio(Dou){
             return cambio();
 
         case "2":
-            alert("Usuario" + " " + d + " " + e);
+            alert("Usuario" + " " + nom + " " + apell);
             return cambio();
 
         case "3":
@@ -70,7 +100,7 @@ switch (principal) {
         
 
         case "ESC":
-        
+    
         break;
 }
     
@@ -137,3 +167,4 @@ function amigo(dios){
             return amigo(); 
     }
 }
+
